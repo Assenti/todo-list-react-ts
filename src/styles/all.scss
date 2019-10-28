@@ -1,12 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&display=swap&subset=cyrillic');
+@import 'colors';
 
 * {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa', 'non-serif';
     box-sizing: border-box;
 }
 
-body {
+body, #root {
     margin: 0;
-    padding: 0;   
+    padding: 0;
+    width: 100%;   
 }
-  
+
+.app {
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 5%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@import 'todo-item';
+@import 'todo-list';
+@import 'todo-input';
+@import 'btn';
+@import 'icon';

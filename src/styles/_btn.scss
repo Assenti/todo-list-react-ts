@@ -1,0 +1,45 @@
+@import 'colors';
+
+.btn {
+    border-radius: 4px;
+    outline: none;
+    border: medium none; 
+    text-transform: uppercase;
+    min-width: 100px;
+    height: 35px;
+    cursor: pointer;
+    font-size: .8rem;
+    font-weight: bold;
+    user-select: none;
+    transition: all .3s ease;
+
+    &:active:not(.disabled-btn) {
+        transform: scale(.95);
+    }
+
+    &.disabled-btn {
+        cursor: not-allowed;
+        background-color: lightgray;
+
+        &:hover {
+            background-color: darken(lightgray, 10%);
+        }
+    }
+
+    &.primary:not(.disabled-btn) {
+        background-color: $primary;
+        color: #fff;
+
+        &:hover {
+            background-color: darken($primary, 5%);
+        }
+    }
+
+    &.secondary {
+        background-color: $secondary;
+
+        &:hover {
+            background-color: darken($secondary, 5%);
+        }
+    }
+}

@@ -1,0 +1,104 @@
+@import 'colors';
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 15px;
+    border-bottom: 1px solid lightgray;
+
+    &:hover {
+        background-color: rgba($primary, .1);
+        transition: all .3s ease;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &.done {
+        background-color: rgba($secondary, .5);
+    }
+}
+
+.todo-item__checks {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    height: 100%;
+}
+
+.todo-item__checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: .8rem;
+    color: $primary;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-left: 35px;
+    height: 25px;
+    height: 25px;
+
+    &:hover input ~ span {
+        background-color: #ccc;
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    & input:checked ~ span {
+        background-color: $success;
+    }
+
+    & input:checked ~ span:after {
+        display: block;
+    }
+
+    & > span {  
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border-radius: 4px;
+    }
+
+    & > span:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    & > span:after {
+        left: 7px;
+        top: 0;
+        width: 8px;
+        height: 16px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+.todo-item__title {
+    width: 100%;
+    text-align: left;
+
+    &.done {
+        text-decoration: line-through;
+        color: gray;
+    }
+}
