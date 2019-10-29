@@ -14,3 +14,6 @@ $ npm start
 ```bash
 $ npm run build
 ```
+
+<br>
+###### Author: Asset Sultanov
