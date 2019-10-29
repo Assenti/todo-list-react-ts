@@ -3,14 +3,12 @@ import React from 'react';
 export interface TodoItem {
     title: string,
     isDone: boolean | undefined,
-    isImportant: boolean | undefined,
     index?: number,
     onDeleteTodo: Function,
-    onToggleDone: Function,
-    onToggleImportance: Function
+    onToggleDone: Function
 }
 
-const TodoItem = ({ title, isDone, isImportant, index, onDeleteTodo, onToggleDone, onToggleImportance }: TodoItem) => {
+const TodoItem = ({ title, isDone, index, onDeleteTodo, onToggleDone }: TodoItem) => {
 
     const deleteTodo = () => {
         onDeleteTodo(index, title)
@@ -29,10 +27,6 @@ const TodoItem = ({ title, isDone, isImportant, index, onDeleteTodo, onToggleDon
                         defaultChecked={isDone}/>
                     <span></span>
                 </label>
-                {/* <label className="todo-item__checkbox important">
-                    <input type="checkbox" defaultChecked={isImportant}/>
-                    <span></span>
-                </label> */}
             </div>
             <div className={isDone ? 'todo-item__title done' : 'todo-item__title'}>{ title }</div>
             <div className="todo-item__controls">

@@ -96,9 +96,14 @@
 .todo-item__title {
     width: 100%;
     text-align: left;
+    font-size: .85rem;
 
     &.done {
         text-decoration: line-through;
         color: gray;
     }
+}
+
+.todo-item__controls {
+    margin-left: 5px;
 }

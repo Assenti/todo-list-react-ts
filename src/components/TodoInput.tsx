@@ -5,23 +5,23 @@ export interface TodoInput {
 }
 
 const TodoInput = ({ onNewTodoInput }: TodoInput) => {
-    const [message, setMessage] = useState('')
+    const [todo, setTodo] = useState('')
 
     const handleInput = (e: any) => {
         e.preventDefault()
-        onNewTodoInput(message)
-        setMessage('')
+        onNewTodoInput(todo)
+        setTodo('')
     }
 
     return (
         <form className="todo-input" 
             onSubmit={handleInput}>
-            <input value={message}
-                placeholder="Type your message"
-                onChange={e => setMessage(e.target.value)}/>
-            <button className={!message ? 'btn primary disabled-btn' : 'btn primary'}
+            <input value={todo}
+                placeholder="What needs to be done"
+                onChange={e => setTodo(e.target.value)}/>
+            <button className={!todo ? 'btn primary disabled-btn' : 'btn primary'}
                 type="submit"
-                disabled={!message}>send</button>
+                disabled={!todo}>add</button>
         </form>
     );
 }

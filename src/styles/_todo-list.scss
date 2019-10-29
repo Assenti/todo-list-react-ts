@@ -21,6 +21,21 @@
     color: $primary;
 }
 
+.todo-list__controls {
+    position: absolute;
+    top: -25px;
+    right: 20px;
+    background-color: white;
+    padding: 3px;
+    border-radius: 8px;
+    color: $primary;
+    display: flex;
+
+    & > div {
+        margin: 0 5px;
+    }
+}
+
 .todo-list {
     max-height: calc(100vh - 150px);
     overflow-y: auto;

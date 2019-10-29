@@ -23,8 +23,39 @@ body, #root {
     flex-direction: column;
 }
 
+@media (max-width: 400px) {
+    .app {
+        width: 100%;
+        padding: 5% 5px;
+        margin: 0;
+    }
+}
+
+.search-input {
+    outline: none;
+    width: 100%;
+    margin-right: 10px;
+    height: 40px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 0 10px;
+    font-size: 1rem;
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+    &::placeholder {
+        color: silver;
+    }
+
+    &:focus {
+        border-color: $primary;
+    }
+}
+
 @import 'todo-item';
 @import 'todo-list';
 @import 'todo-input';
 @import 'btn';
 @import 'icon';
+@import 'snackbar';
+@import 'dialog';

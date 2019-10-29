@@ -29,9 +29,25 @@
         }
     }
 
+    &.primary {
+        i {
+            color: $primary;
+        }
+
+        &:hover {
+            background-color: rgba($primary, .1);
+            transition: all .3s ease;
+        }
+    }
+
     &.error {
         i {
             color: $error;
+        }
+
+        &:hover {
+            background-color: rgba($error, .1);
+            transition: all .3s ease;
         }
     }
 }
