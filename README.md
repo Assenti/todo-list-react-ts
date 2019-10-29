@@ -16,4 +16,5 @@ $ npm run build
 ```
 
 <br>
-###### Author: Asset Sultanov
+
+<p style="font-size: 14px; color: gray;">Author: Asset Sultanov</p>
